@@ -24,7 +24,7 @@ h2, h3, h4 {
   grid-template-rows: 1fr auto 1fr auto;
   justify-items: end;
   align-items: start;
-  block-size: max(98vb, 668px);
+  block-size: max(100vb, 668px);
   padding: var(--global-padding, 10px);
 }
 
@@ -93,6 +93,19 @@ h2, h3, h4 {
   cursor: pointer;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-border-color, rgba(50, 49, 45, 0.4));
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--border-color, #353430);
+}
+
+
 .header__theme-menu-button_active {
   outline: 1px solid var(--border-color, #353430);
   pointer-events: none;
@@ -135,6 +148,10 @@ h2, h3, h4 {
   background-color: var(--accent-color, #ff8dcb);
 }
 
+.main__title-decor-sub {
+  font-weight: 400;
+}
+
 .main__card-text-link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color, #ff8dcb);
@@ -160,7 +177,7 @@ h2, h3, h4 {
 .footer {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  block-size: max(98vb, 668px);
+  block-size: 100vb;
   padding: var(--global-padding, 10px);
   justify-self: center;
   align-self: center;
@@ -170,6 +187,7 @@ h2, h3, h4 {
 
 .footer::before {
   content: '';
+  display: block;
   block-size: 25px;
   justify-self: end;
   border-inline-end: 1px solid var(--text-color, #353430);
@@ -179,8 +197,8 @@ h2, h3, h4 {
 
 .footer::after {
   content: '';
-  block-size: 25px;
   display: block;
+  block-size: 25px;
   border-inline-start: 1px solid var(--text-color, #353430);
   border-block-end: 1px solid var(--text-color, #353430);
   inline-size: 25px;
@@ -197,7 +215,7 @@ h2, h3, h4 {
 .label__shadow {
   justify-self: start;
   color: var(--heading-color, #ffc2e6);
-  font-size: 157px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-color, #ff8dcb);
 }
@@ -210,7 +228,7 @@ h2, h3, h4 {
 }
 
 @media (width >= 768px) {
-  @media (width < 1024px) {
+  @media (width <= 1024px) {
     :root {
       --menu-margin: 172px;
       --title-margin: 162px;
@@ -221,15 +239,6 @@ h2, h3, h4 {
     --global-padding: 20px;
     --main-padding: 60px;
     --main-gap: 80px;
-  }
-  .header {
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr auto 1fr auto;
-    justify-items: end;
-    align-items: start;
-    block-size: max(104vb, 1070px);
-    padding: var(--global-padding, 10px);
   }
 
   .label__shadow {
