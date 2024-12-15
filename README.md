@@ -1,1 +1,1 @@
-https://github.com/aaswirin/slozhno-sosredotochitsya/new/main
+https://github.com/aaswirin/slozhno-sosredotochitsya-fd
