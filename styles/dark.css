@@ -10,6 +10,8 @@
     --global-border-color: #ff0070;
     --title-decor-color: #000028;
     --section-title-color: #ff0070;
+    --border-color: #ff0070;
+    --title-color: #ff0070;
 
     --background-image: url(../images/cover-image-dark.png);
     --display-rec: flex;
@@ -26,6 +28,7 @@
   --global-border-color: #ff0070;
   --title-decor-color: #000028;
   --section-title-color: #ff0070;
+  --border-color: #ff0070;
 
   --background-image: url(../images/cover-image-dark.png);
   --display-rec: flex;
